@@ -1,0 +1,102 @@
+ *{
+    font-family: 'poppins';
+ }
+ body{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image:url('./images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+ }
+ h2{
+    color: #002765;
+ }
+ .container{
+    max-width: 500px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 5px 20px 50px;
+    border-radius: 15px;
+    
+ }
+ #todo{
+    width: 70%;
+    font-size: 1.5em;
+    padding: 10px;
+    color: white;
+
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(178, 176, 176);
+   
+ }
+ input::placeholder{
+    color: hsla(0, 0%, 100%, 0.501);
+ }
+button{
+    font-size: 1.5em;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: hsla(195, 88%, 42%, 0.775); 
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: hsla(195, 88%, 52%, 0.9);
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  
+}
+
+ul li{
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    margin: 10px 0 ;
+    padding: 13px ;
+    margin-right: 75px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
+    border: solid;
+    background-color: #d4e3f9;
+    color: #003366;
+    transition: background-color 0.3s ease;
+}
+ul li:not(.complete):hover{
+    background-color: #aac8f6;
+}
+
+.dustbin {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #003366;         
+    font-size: 1.5em;     
+    transition: color 0.3s ease;
+}
+
+.dustbin:hover {
+    color: red !important;           
+}
+li.complete .dustbin{
+    color: white;
+}
+.complete{
+    text-decoration: line-through;
+    text-decoration-color: #002765;
+    text-decoration-thickness: 3px ;
+    background-color: #002765;
+    color: white;
+}
